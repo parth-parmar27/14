@@ -1,0 +1,224 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Example</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+    .container {
+        width: 300px;
+        text-align: center;
+        margin: 20px;
+    }
+    h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    p {
+        font-size: 14px;
+    }
+    .image-box {
+        width: 100%;
+        height: 150px;
+        background-color: #ccc;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #333;
+        font-size: 24px;
+    }
+    .box-model {
+        border: 2px solid #333;
+        padding: 10px;
+        margin: 20px 0;
+    }
+    .styled-list ul {
+        list-style-type: disc;
+        text-align: left;
+        margin: 0 0 20px 20px;
+    }
+    .positioning {
+        position: relative;
+        background-color: #eee;
+        padding: 10px;
+        margin: 20px 0;
+    }
+    .positioning .absolute-box {
+        position: absolute;
+        top: -10px;
+        left: 10px;
+        background-color: #ff5722;
+        color: #fff;
+        padding: 5px;
+        font-size: 12px;
+    }
+    .border-box {
+        border: 2px solid #009688;
+        background-color: #e0f7fa;
+        padding: 10px;
+        margin: 20px 0;
+        color: #00796b;
+    }
+    .animation-box {
+        width: 50px;
+        height: 50px;
+        background-color: #ff5722;
+        margin: 20px auto;
+        animation: grow 2s infinite alternate;
+    }
+    @keyframes grow {
+        from { transform: scale(1); }
+        to { transform: scale(1.5); }
+    }
+    .tooltip {
+        position: relative;
+        display: inline-block;
+        margin: 20px 0;
+    }
+    .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 120px;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 5px;
+        border-radius: 5px;
+        position: absolute;
+        bottom: 125%; /* Position tooltip above */
+        left: 50%;
+        margin-left: -60px;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+    }
+    .styled-image {
+        width: 100%;
+        height: 200px;
+        background-color: #ccc;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        color: #333;
+    }
+    .css-variables {
+        --primary-color: #2196F3;
+        --secondary-color: #4CAF50;
+    }
+    .css-variables .box1 {
+        background-color: var(--primary-color);
+        color: #fff;
+        padding: 10px;
+        margin: 5px 0;
+    }
+    .css-variables .box2 {
+        background-color: var(--secondary-color);
+        color: #fff;
+        padding: 10px;
+        margin: 5px 0;
+    }
+    .flexbox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px 0;
+    }
+    .flexbox .item {
+        background-color: #03A9F4;
+        color: #fff;
+        padding: 10px;
+        margin: 5px 0;
+        width: 80%;
+        text-align: center;
+        border-radius: 5px;
+    }
+    .gradient-background {
+        background: linear-gradient(to right, #2196F3, #4CAF50);
+        color: #fff;
+        padding: 20px;
+        margin: 20px 0;
+    }
+    /* Responsive */
+    @media (max-width: 600px) {
+        .container {
+            width: 90%;
+        }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>CSS Example</h1>
+    <p>This page demonstrates various CSS features.</p>
+
+    <div class="image-box">Welcome to CSS Styling</div>
+
+    <div class="box-model">
+        <strong>The Box Model</strong>
+        <p>This box has padding, margins, and borders applied.</p>
+    </div>
+
+    <div class="styled-list">
+        <strong>Styled List</strong>
+        <ul>
+            <li>First item</li>
+            <li>Second item</li>
+            <li>Third item</li>
+        </ul>
+    </div>
+
+    <div class="positioning">
+        <div class="absolute-box">I'm positioned absolutely!</div>
+        <strong>CSS Positioning</strong>
+        <p>This box contains an absolutely positioned element inside it.</p>
+    </div>
+
+    <div class="border-box">
+        <strong>Borders and Boxes</strong>
+        <p>This is a colored box with custom borders.</p>
+    </div>
+
+    <div class="animation-box"></div>
+    <p>CSS3 Animations</p>
+
+    <div class="tooltip">Hover over me
+        <span class="tooltiptext">CSS Tooltips</span>
+    </div>
+
+    <div class="styled-image">400 x 400</div>
+
+    <div class="css-variables">
+        <div class="box1">This box uses a CSS variable for the background color.</div>
+        <div class="box2">This one uses another variable for the background.</div>
+    </div>
+
+    <div class="flexbox">
+        <strong>Flexbox</strong>
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+
+    <div class="gradient-background">
+        <strong>Working with Gradients</strong>
+        <p>This section has a gradient background.</p>
+    </div>
+
+    <div class="media-query">
+        
+    </div>
+</div>
+
+</body>
+</html>

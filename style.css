@@ -1,0 +1,160 @@
+/*cursor*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: gilroy;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    cursor: url(LINK\ SELECT.cur), auto;
+}
+
+h1{
+    font-family: Ink free;
+}
+h2{
+    font-family: Gakyo;
+    color: aliceblue;
+}
+h3{
+    font-family: Ravie;
+    padding: 18px;
+    font-size: 60px;
+    color: brown;
+}
+
+#main{
+    height: 100%;
+    width: 100%;
+    background-color:rgba(0, 0, 0, 0.79);  
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+#cursor{
+    height: 20px;
+    width: 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50px;
+    position: fixed;
+    color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 4px;
+
+    /*cursor ne agal lavva mate*/
+    z-index: 9;
+}
+
+#image{
+    height: 30vw;
+    width: 60vw;
+    background-color: red;
+    position: relative;
+}
+
+#image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#overlay{
+    background-color: transparent; 
+    height: 100%;
+    width: 100%;
+    position: absolute;
+
+
+    /*corser ne agal lavva mate*/
+    z-index: 10;
+}
+
+
+
+
+
+#page1{
+    height: 100%;
+    width: 100%;
+    background: skyblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#box1{
+    height: 100px;
+    width: 200px;
+    background: lightyellow;
+}
+
+#page2{
+    height: 100%;
+    width: 100%;
+    background: rgb(53, 127, 156);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#box2{
+    height: 100px;
+    width: 200px;
+    background: lightyellow;
+}
+
+#page3{
+    height: 100%;
+    width: 100%;
+    background:rgb(6, 46, 62);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#box3{
+    height: 100px;
+    width: 200px;
+    background: lightyellow;
+}
+
+/* back button */ 
+button {
+text-decoration: none;
+ display: flex;
+ height: 3em;
+ width: 100px;
+ align-items: center;
+ justify-content: center;
+ background-color: #eeeeee4b;
+ border-radius: 3px;
+ letter-spacing: 1px;
+ transition: all 0.2s linear;
+ cursor: pointer;
+ border: none;
+ background: #fff;
+}
+
+button > svg {
+ margin-right: 5px;
+ margin-left: 5px;
+ font-size: 20px;
+ transition: all 0.4s ease-in;
+}
+
+button:hover > svg {
+ font-size: 1.2em;
+ transform: translateX(-5px);
+}
+
+button:hover {
+ box-shadow: 9px 9px 33px #d1d1d1, -9px -9px 33px #ffffff;
+ transform: translateY(-2px);
+}

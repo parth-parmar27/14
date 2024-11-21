@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS and JavaScript Animation Example</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+  }
+  h1 {
+    font-size: 24px;
+  }
+  .box {
+    width: 100px;
+    height: 100px;
+    background-color: #3498db;
+    margin: 20px auto;
+    position: relative;
+  }
+  .button-container {
+    margin-top: 20px;
+  }
+  .button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 0 10px;
+    cursor: pointer;
+  }
+  .button:hover {
+    background-color: #218838;
+  }
+</style>
+</head>
+<body>
+
+<h1>CSS and JavaScript Animation Example</h1>
+<div class="box" id="animateBox"></div>
+<div class="button-container">
+  <button class="button" onclick="startAnimation()">Start Animation</button>
+  <button class="button" onclick="stopAnimation()">Stop Animation</button>
+  <button class="button" onclick="resetAnimation()">Reset</button>
+</div>
+
+<script>
+  let animationId = null;
+  const box = document.getElementById("animateBox");
+  let position = 0;
+  let direction = 1;  // 1 for moving down, -1 for moving up
+
+  function animate() {
+    // Move the box up and down within a 100px range
+    position += 2 * direction;
+    box.style.transform = `translateY(${position}px)`;
+
+    if (position >= 100 || position <= 0) {
+      direction *= -1;  // Reverse direction
+    }
+
+    // Continuously request the next frame
+    animationId = requestAnimationFrame(animate);
+  }
+
+  function startAnimation() {
+    if (!animationId) {  // Start only if no animation is running
+      animate();
+    }
+  }
+
+  function stopAnimation() {
+    if (animationId) {  // Stop only if an animation is running
+      cancelAnimationFrame(animationId);
+      animationId = null;  // Clear the animation ID
+    }
+  }
+
+  function resetAnimation() {
+    stopAnimation();  // Stop any running animation
+    position = 0;     // Reset position
+    direction = 1;    // Reset direction
+    box.style.transform = 'translateY(0)';  // Reset transformation
+  }
+</script>
+
+</body>
+</html>
